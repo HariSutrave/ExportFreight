@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to In Time Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to In Time Logistics</h1>
+    <h1>Ocean Freight Enquiry Sheet</h1>
+</header>
+
+<div class="container">
+    <!-- Information Table Section -->
+    <div class="table-section">
+        <h2>Information Required</h2>
+        <form id="infoForm">
+            <label for="Importer">Importer Name:</label>
+            <input type="text" id="Importer" placeholder="Enter Column A" required>
+            <br><br>
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" placeholder="Enter Column B" required>
+            <br><br>
+            <label for="StuffingPermission">Stuffing Permission:</label>
+            <input type="text" id="StuffingPermission" placeholder="Enter Column C" required>
+            <br><br>
+            <label for="Description">Description:</label>
+            <input type="text" id="Description" placeholder="Enter Column D" required>
+            <br><br>
+            <button type="submit" class="btn">Add Information</button>
+        </form>
+        <h3>Table of Entries</h3>
+        <table id="infoTable">
+            <thead>
+                <tr>
+                    <th>Importer</th>
+                    <th>Address</th>
+                    <th>Stuffing Permission</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- File Upload Section -->
+    <div class="file-upload">
+        <h2>Upload and View Multiple PDF Files</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div id="fileInputContainer">
+                <div class="file-input-wrapper">
+                    <input type="file" class="fileInput" name="file" accept=".pdf" required>
+                    <button class="btn viewButton" type="button" style="display: none;">View PDF</button>
+                </div>
+            </div>
+            <button type="button" id="addFileButton" class="btn">Add Another File</button>
+        </form>
+        <div id="fileList"></div>
+    </div>
+
+    <!-- Useful Links Section -->
+    <div class="links-section">
+        <h2>Useful Links</h2>
+        <ul>
+            <li><a href="https://www.dgft.gov.in/" target="_blank">DGFT</a></li>
+            <li><a href="https://www.cbic.gov.in/" target="_blank">CBIC</a></li>
+            <li><a href="https://www.customs.gov/" target="_blank">Customs Portal</a></li>
+        </ul>
+    </div>
+
+    <!-- Customized Calculator Section -->
+    <div class="calculator-section">
+        <h2>Customized Calculator</h2>
+        <form id="calculatorForm">
+            <input type="number" id="num1" placeholder="Enter Num 1" required>
+            <input type="number" id="num2" placeholder="Enter Num 2" required>
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+        <p id="calcResult"></p>
+    </div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Saving Calculator</h2>
+        <form id="calculatorForm">
+            <!-- Input Fields -->
+            <div>
+                <label for="principal">Principal Amount:</label>
+                <input type="number" id="principal" placeholder="Enter Principal Amount" required>
+            </div>
+            <div>
+                <label for="interestRate">Interest Rate (per annum %):</label>
+                <input type="number" id="interestRate" placeholder="Enter Interest Rate" required>
+                               
+            
+            </div>
+            <div>
+                <label for="licenseExpense">License Expense:</label>
+                <input type="number" id="licenseExpense" placeholder="Enter License Expense" required>
+            </div>
+            <div>
+                <label for="numYears">Number of Years:</label>
+                <input type="number" id="numYears" placeholder="Enter Number of Years" required>
+            </div>
+            <div>
+                <label for="bankCharge">Bank Charge Amount:</label>
+                <input type="number" id="bankCharge" placeholder="Enter Bank Charge Amount" required>
+            </div>
+            <div>
+                <label for="insuranceAmount">Insurance Amount:</label>
+                <input type="number" id="insuranceAmount" placeholder="Enter Insurance Amount" required>
+            </div>
+            <div>
+                <label for="Other Expenses">Other Expenses:</label>
+                <input type="number" id="Other Expenses" placeholder="Enter Other Expenses" required>
+            </div>
+
+            <!-- Output Fields -->
+            <h3>Results</h3>
+            <div>
+                <label>Interest Amount Per Annum:</label>
+                <span id="interestAmount">0.00</span>
+            </div>
+            <div>
+                <label>Amortized License Expense:</label>
+                <span id="amortizedLicense">0.00</span>
+            </div>
+            <div>
+                <label>Total Charges (Bank + Insurance + Rent):</label>
+                <span id="totalCharges">0.00</span>
+            </div>
+            <div>
+                <label>Total Amount (Interest + Charges):</label>
+                <span id="totalAmount">0.00</span>
+            </div>
+            <div>
+                <label>Difference (Interest - Charges):</label>
+                <span id="difference">0.00</span>
+            </div>
+
+            <!-- Calculate Button -->
+            <button type="button" id="calculateButton" class="btn">Calculate</button>
+        </form>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
